@@ -3,6 +3,7 @@ import Button from "./components/Button"
 import Meteo from "./components/Meteo"
 import Search from "./components/Search"
 import { useState } from "react";
+import NavBar from "./components/NavBar";
 
 const pokemonList = [
   {
@@ -40,12 +41,10 @@ const pokemonList = [
   
     return (
       <div>
-        <nav>
-           {pokemonList.map((Var) => {
-            return (
-              <button key={Var.id} onClick = {() => setPokemonIndex(Var.id)}>{Var.name}</button>
-           )})}
-        </nav>
+        <NavBar
+        items={pokemonList}
+        setPokemonIndex={setPokemonIndex}
+        />
         <PokemonCard pokemon={pokemonList[pokemonIndex]} />
       </div>
     );
