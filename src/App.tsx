@@ -4,6 +4,7 @@ import Meteo from "./components/Meteo"
 import Search from "./components/Search"
 import { useState } from "react";
 import NavBar from "./components/NavBar";
+import { useEffect } from "react";
 
 const pokemonList = [
   {
@@ -38,6 +39,9 @@ const pokemonList = [
 
   function App() {
     const [pokemonIndex, setPokemonIndex] = useState(0);
+    useEffect(() => {
+      alert("hello pokemon trainer :)");
+    }, [])
   
     return (
       <div>

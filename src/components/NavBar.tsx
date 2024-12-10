@@ -12,7 +12,13 @@ interface NavBarProps {
     return (
       <nav>
         {items.map((item) => (
-          <button key={item.id} onClick={() => setPokemonIndex(item.id)}>
+          <button 
+          key={item.id} 
+          onClick={() => {
+                if (item.name.toLowerCase() === "pikachu") {
+                  alert("pika pikachu !!!");
+                }
+          setPokemonIndex(item.id)}}>
             {item.name}
           </button>
         ))}
